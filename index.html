@@ -1,245 +1,444 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Future Ready Learners — Leaders of Tomorrow</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Future Ready Learners — Leaders of Tomorrow</title>
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --simplify: #4f46e5;
-      --visualize: #0a9396;
-      --relate: #e49b0f;
-      --implement: #0f1724;
-      --creative: #7c5cff;
-      --bg: #f8fbfd;
-    }
-    body { font-family: 'Poppins', sans-serif; background: var(--bg); color:#0f172a; margin:0; }
+  <style>
+    :root {
+      --simplify: #4f46e5;
+      --visualize: #0a9396;
+      --relate: #e49b0f;
+      --implement: #0f1724;
+      --creative: #7c5cff;
+      --bg: #f8fbfd;
+    }
 
-    /* HERO */
-    .hero { position: relative; height: 64vh; min-height: 340px; overflow: hidden; background-color: #111827; }
-    .hero .bg { position: absolute; inset:0; background-image:url('https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/ClassBanner1.jpg'); background-size:70% auto; background-position:center; background-repeat:no-repeat; filter:brightness(0.55); }
-    .hero .overlay { position:relative; z-index:10; display:flex; flex-direction:column; justify-content:center; align-items:center; height:100%; padding:2rem; text-align:center; }
-    .hero h1, .hero p { color:#ffffff!important; text-shadow:0 1px 4px rgba(0,0,0,0.4); }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: #0f172a;
+      margin: 0;
+    }
 
-    /* COLLAGE */
-    .collage { display:flex; justify-content:center; gap:1rem; margin-top:3rem; }
-    .collage .circle { width:112px; height:112px; border-radius:9999px; overflow:hidden; border:6px solid white; box-shadow:0 8px 30px rgba(8,15,32,0.12); }
-    .collage img { width:100%; height:100%; object-fit:cover; }
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 64vh;
+      min-height: 340px;
+      overflow: hidden;
+      background-color: #111827;
+    }
 
-    main { max-width:1100px; margin:0 auto; padding:28px 18px; }
+    .hero .bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/ClassBanner1.jpg');
+      background-size: 70% auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: brightness(0.55);
+    }
 
-    /* Section heading */
-    h2 { color:var(--simplify); border-left:5px solid var(--visualize); padding-left:10px; font-size:1.9rem; font-weight:700; margin-bottom:0.5rem; }
-    p.lead { color:#475569; margin-top:0.5rem; }
+    .hero .overlay {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 2rem;
+      text-align: center;
+    }
 
-    /* TOP highlight only */
-    .section-band { position:relative; overflow:visible; margin-top:1.5rem; }
-    .section-band::before {
-      content: "";
-      display:block;
-      height:6px;
-      width:100%;
-      border-radius:6px;
-    }
-    .band-indigo::before { background:var(--simplify); }
-    .band-teal::before { background:var(--visualize); }
-    .band-amber::before { background:var(--relate); }
-    .band-dark::before { background:var(--implement); }
-    .band-purple::before { background:var(--creative); }
+    .hero h1,
+    .hero p {
+      color: #ffffff !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    }
 
-    /* Topic section card */
-    .topic { display:flex; gap:0; background:white; padding:0; border-radius:0; box-shadow:0 10px 30px rgba(8,15,32,0.04); }
-    .topic .inner { width:100%; display:flex; align-items:center; gap:0; padding:12px; }
+    /* COLLAGE */
+    .collage {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
 
-    .images { width:65%; display:flex; gap:0; }
-    .images img {
-      width:50%;
-      height:250px;
-      object-fit:contain;
-      background:white;
-      border-radius:0;
-      padding:4px;
-      display:block;
-    }
-    .images img:first-child { border-top-left-radius:8px; border-bottom-left-radius:8px; }
-    .images img:last-child { border-top-right-radius:8px; border-bottom-right-radius:8px; }
+    .collage .circle {
+      width: 112px;
+      height: 112px;
+      border-radius: 9999px;
+      overflow: hidden;
+      border: 6px solid white;
+      box-shadow: 0 8px 30px rgba(8, 15, 32, 0.12);
+    }
 
-    .content { width:35%; padding:18px; display:flex; flex-direction:column; justify-content:center; gap:8px; }
-    .content h3 { margin:0; font-size:1.25rem; font-weight:700; }
-    .content p { margin:0; color:#475569; }
+    .collage img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-    .reverse .inner { flex-direction:row-reverse; }
-    .reverse .images img:first-child { border-top-left-radius:0; border-bottom-left-radius:0; border-top-right-radius:8px; border-bottom-right-radius:8px; }
-    .reverse .images img:last-child { border-top-right-radius:0; border-bottom-right-radius:0; border-top-left-radius:8px; border-bottom-left-radius:8px; }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 18px;
+    }
 
-    /* Events */
-    .events { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:1.25rem; }
-    .event { background:white; padding:12px; border-radius:10px; box-shadow:0 10px 24px rgba(8,15,32,0.06); text-align:center; }
-    .event img { width:100%; height:200px; object-fit:contain; border-radius:8px; padding:4px; }
+    h2 {
+      color: var(--simplify);
+      border-left: 5px solid var(--visualize);
+      padding-left: 10px;
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
 
-    /* Footer circle removed */
+    p.lead {
+      color: #475569;
+      margin-top: 0.5rem;
+    }
 
-    /* Responsive */
-    @media(max-width:900px){
-      .topic .inner { flex-direction:column; }
-      .reverse .inner { flex-direction:column; }
-      .images, .content { width:100%; }
-      .images img { height:200px; }
-      .events { grid-template-columns:1fr; }
-    }
-  </style>
+    .section-band {
+      position: relative;
+      overflow: visible;
+      margin-top: 1.5rem;
+    }
+
+    .section-band::before {
+      content: "";
+      display: block;
+      height: 6px;
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .band-indigo::before {
+      background: var(--simplify);
+    }
+
+    .band-teal::before {
+      background: var(--visualize);
+    }
+
+    .band-amber::before {
+      background: var(--relate);
+    }
+
+    .band-dark::before {
+      background: var(--implement);
+    }
+
+    .band-purple::before {
+      background: var(--creative);
+    }
+
+    .topic {
+      display: flex;
+      gap: 0;
+      background: white;
+      padding: 0;
+      border-radius: 0;
+      box-shadow: 0 10px 30px rgba(8, 15, 32, 0.04);
+    }
+
+    .topic .inner {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      padding: 12px;
+    }
+
+    .images {
+      width: 65%;
+      display: flex;
+      gap: 0;
+    }
+
+    .images img {
+      width: 50%;
+      height: 250px;
+      object-fit: contain;
+      background: white;
+      border-radius: 0;
+      padding: 4px;
+      display: block;
+    }
+
+    .images img:first-child {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    .images img:last-child {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    .content {
+      width: 35%;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .content h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .content p {
+      margin: 0;
+      color: #475569;
+    }
+
+    .reverse .inner {
+      flex-direction: row-reverse;
+    }
+
+    .reverse .images img:first-child {
+      border-radius: 0;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    .reverse .images img:last-child {
+      border-radius: 0;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    /* Events */
+    .events {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 1.25rem;
+    }
+
+    .event {
+      background: white;
+      padding: 12px;
+      border-radius: 10px;
+      box-shadow: 0 10px 24px rgba(8, 15, 32, 0.06);
+      text-align: center;
+    }
+
+    .event img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 8px;
+      padding: 4px;
+    }
+
+    @media(max-width:900px) {
+      .topic .inner {
+        flex-direction: column;
+      }
+
+      .reverse .inner {
+        flex-direction: column;
+      }
+
+      .images,
+      .content {
+        width: 100%;
+      }
+
+      .images img {
+        height: 200px;
+      }
+
+      .events {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="bg"></div>
-  <div class="overlay">
-    <h1 class="text-5xl font-bold">Future Ready Learners</h1>
-    <p class="text-xl max-w-3xl">Leaders of Tomorrow — building responsibility, empathy, leadership, teamwork and creativity.</p>
-  </div>
-</header>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="bg"></div>
+    <div class="overlay">
+      <h1 class="text-5xl font-bold">Future Ready Learners</h1>
+      <p class="text-xl max-w-3xl">
+        Leaders of Tomorrow — building responsibility, empathy, leadership, teamwork and creativity.
+      </p>
+    </div>
+  </header>
 
-<!-- COLLAGE -->
-<div class="collage">
-  <div class="circle"><img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/DiwaliPrepCollage.jpg"></div>
-  <div class="circle"><img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/StemTinkering.jpg"></div>
-  <div class="circle"><img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/EmpathynService.jpg"></div>
-  <div class="circle"><img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/techSolution.jpg"></div>
-</div>
+  <!-- COLLAGE -->
+  <div class="collage">
+    <div class="circle"><img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/DiwaliPrepCollage.jpg"></div>
+    <div class="circle"><img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/StemTinkering.jpg"></div>
+    <div class="circle"><img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/EmpathynService.jpg"></div>
+    <div class="circle"><img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/techSolution.jpg"></div>
+  </div>
 
-<main>
+  <main>
 
-  <section>
-    <h2>Our Classroom Culture — Leaders of Tomorrow</h2>
-    <p class="lead">A culture built on responsibility, empathy, leadership, teamwork and creativity — preparing students to think, act and lead for society.</p>
-  </section>
+    <section>
+      <h2>Our Classroom Culture — Leaders of Tomorrow</h2>
+      <p class="lead">
+        A culture built on responsibility, empathy, leadership, teamwork and creativity — preparing students to think, act and lead for society.
+      </p>
+    </section>
 
-  <!-- RESPONSIBILITY -->
-  <div class="section-band band-indigo">
-    <div class="topic">
-      <div class="inner">
-        <div class="images">
-          <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/StemTinkering.jpg">
-          <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/DiwaliPrepCollage.jpg">
-        </div>
-        <div class="content">
-          <h3>Responsibility & Ownership</h3>
-          <p>Students take charge of class events, handle decorations and lead Saturday demonstrations — developing ownership through action.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- RESPONSIBILITY -->
+    <div class="section-band band-indigo">
+      <div class="topic">
+        <div class="inner">
+          <div class="images">
+            <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/StemTinkering.jpg">
+            <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/DiwaliPrepCollage.jpg">
+          </div>
+          <div class="content">
+            <h3>Responsibility & Ownership</h3>
+            <p>Students take charge of class events, handle decorations and lead Saturday demonstrations...</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- EMPATHY -->
-  <div class="section-band band-teal">
-    <div class="topic reverse">
-      <div class="inner">
-        <div class="images">
-          <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/EmpathynService.jpg">
-          <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/techSolution.jpg">
-        </div>
-        <div class="content">
-          <h3>Empathy & Service</h3>
-          <p>Students design real-world solutions for community challenges and present to mentors for feedback and iteration.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- EMPATHY -->
+    <div class="section-band band-teal">
+      <div class="topic reverse">
+        <div class="inner">
+          <div class="images">
+            <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/EmpathynService.jpg">
+            <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/techSolution.jpg">
+          </div>
+          <div class="content">
+            <h3>Empathy & Service</h3>
+            <p>Students design real-world solutions for community challenges...</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- LEADERSHIP -->
-  <div class="section-band band-amber">
-    <div class="topic">
-      <div class="inner">
-        <div class="images">
-          <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/StudentActivity.jpeg">
-          <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/Projects.JPG">
-        </div>
-        <div class="content">
-          <h3>Leadership & Initiative</h3>
-          <p>Students run quizzes, organize festivals and lead weekend demos — building initiative and public-speaking skills.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- LEADERSHIP -->
+    <div class="section-band band-amber">
+      <div class="topic">
+        <div class="inner">
+          <div class="images">
+            <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/StudentActivity.jpeg">
+            <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/Projects.JPG">
+          </div>
+          <div class="content">
+            <h3>Leadership & Initiative</h3>
+            <p>Students run quizzes, organize festivals and lead weekend demos...</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- TEAMWORK -->
-  <div class="section-band band-dark">
-    <div class="topic reverse">
-      <div class="inner">
-        <div class="images">
-          <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/VNPL.jpeg">
-          <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/IPL.jpeg">
-        </div>
-        <div class="content">
-          <h3>Teamwork & Resilience</h3>
-          <p>Tournaments and sports events teach teamwork, composure and respect for rules — essential qualities for young leaders.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- TEAMWORK -->
+    <div class="section-band band-dark">
+      <div class="topic reverse">
+        <div class="inner">
+          <div class="images">
+            <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/VNPL.jpeg">
+            <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/IPL.jpeg">
+          </div>
+          <div class="content">
+            <h3>Teamwork & Resilience</h3>
+            <p>Tournaments and sports events teach teamwork, composure and respect for rules...</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- CREATIVITY -->
-  <div class="section-band band-purple">
-    <div class="topic">
-      <div class="inner">
-        <div class="images">
-          <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/Artwork.jpeg">
-          <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/GroupJoy.jpg">
-        </div>
-        <div class="content">
-          <h3>Creativity & Curiosity</h3>
-          <p>Art, clay modelling and museum visits help students express ideas, experiment and deepen curiosity.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- CREATIVITY -->
+    <div class="section-band band-purple">
+      <div class="topic">
+        <div class="inner">
+          <div class="images">
+            <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/Artwork.jpeg">
+            <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/GroupJoy.jpg">
+          </div>
+          <div class="content">
+            <h3>Creativity & Curiosity</h3>
+            <p>Art, clay modelling and museum visits help students express ideas...</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- EVENTS -->
-  <section>
-    <h2>Events & Highlights</h2>
-    <div class="events">
+    <!-- EVENTS -->
+    <section>
+      <h2>Events & Highlights</h2>
 
-      <div class="event">
-        <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/VNPL.jpeg">
-        <h4 class="font-semibold mt-2">Varsha Nagar Premier League</h4>
-        <p class="text-sm text-gray-600">A competitive event building teamwork, sportsmanship and leadership.</p>
-      </div>
+      <div class="events">
 
-      <div class="event">
-        <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/DiwaliPrepCollage.jpg">
-        <h4 class="font-semibold mt-2">Festival Leadership</h4>
-        <p class="text-sm text-gray-600">Students plan celebrations for Diwali and Republic Day.</p>
-      </div>
+        <div class="event">
+          <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/VNPL.jpeg">
+          <h4 class="font-semibold mt-2">Varsha Nagar Premier League</h4>
+          <p class="text-sm text-gray-600">A competitive event building teamwork and leadership.</p>
+        </div>
 
-      <div class="event">
-        <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/IPL.jpeg">
-        <h4 class="font-semibold mt-2">Field Visits</h4>
-        <p class="text-sm text-gray-600">Visits like IPL matches broaden student exposure and motivation.</p>
-      </div>
+        <div class="event">
+          <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/DiwaliPrepCollage.jpg">
+          <h4 class="font-semibold mt-2">Festival Leadership</h4>
+          <p class="text-sm text-gray-600">Students plan celebrations for Diwali and Republic Day.</p>
+        </div>
 
-    </div>
-  </section>
+        <div class="event">
+          <img src="https://raw.githubusercontent.com/iamvrajgopal/futurereadylearners/main/IPL.jpeg">
+          <h4 class="font-semibold mt-2">Field Visits</h4>
+          <p class="text-sm text-gray-600">Visits like IPL matches broaden exposure.</p>
+        </div>
 
-</main>
+      </div>
 
-<!-- NEW FOOTER -->
-<footer class="bg-gray-800 text-white py-16 mt-12">
-  <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-      <p class="text-xl font-light max-w-4xl mx-auto mb-4 text-gray-300">
-          “Future Ready Learners- Leaders of Tomorrow”
-      </p>
-      <h3 class="text-xl font-bold mb-1">Rajgopal Venkateswaran</h3>
-      <p class="text-sm text-gray-400">Varsha Nagar MPS | Teach For India Fellow</p>
-      <p class="text-xs mt-8 text-gray-500">&copy; 2024 Academic Transformation Portfolio</p>
-  </div>
-</footer>
+      <!-- VIDEO HIGHLIGHT -->
+      <div class="mt-10">
+        <h3 class="text-2xl font-semibold mb-4 text-center text-gray-800">Video Highlight</h3>
+        <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg max-w-3xl mx-auto">
+          <iframe class="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/cpY6Xq7qy84"
+            title="YouTube video" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-white py-16 mt-12">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+
+      <p class="text-xl font-light max-w-4xl mx-auto mb-4 text-gray-300">
+        “Future Ready Learners — Leaders of Tomorrow”
+      </p>
+
+      <h3 class="text-xl font-bold mb-1">Rajgopal Venkateswaran</h3>
+      <p class="text-sm text-gray-400">Varsha Nagar MPS | Teach For India Fellow</p>
+
+      <!-- RETURN BUTTON -->
+      <a href="https://iamvrajgopal.github.io/TFIMainPage/"
+        class="inline-block mt-6 px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-medium rounded-lg transition">
+        Return to Main Page
+      </a>
+
+      <p class="text-xs mt-8 text-gray-500">&copy; 2024 Academic Transformation Portfolio</p>
+    </div>
+  </footer>
 
 </body>
 </html>
